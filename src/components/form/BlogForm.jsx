@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
+import { useDispatch } from '../../state/blogProvider';
 
 const BlogForm = () => {
+    const dispatch = useDispatch();
     //local state
     const [title, setTitle] = useState('');
     const [body, setBody] = useState('');
