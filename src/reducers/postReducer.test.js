@@ -1,4 +1,5 @@
 import reducer from './postReducer';
+import { createBlog } from '../actions/postActions';
 
 describe('blog reducer', () => {
     it('adds a blog with the CREATE_BLOG action', () => {
@@ -6,13 +7,10 @@ describe('blog reducer', () => {
             blogPosts: []
         };
 
-        const action = {
-            type: CREATE_BLOG,
-            payload: {
-                title: 'hello world',
-                body: 'my first blog post body'
-            }
-        };
+        const action = createBlog({
+            title: 'hello world',
+            body: 'my first blog post body'
+        });
 
         const newState = reducer(state, action);
 
