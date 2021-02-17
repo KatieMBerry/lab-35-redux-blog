@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { createBlog } from '../../actions/postActions';
 import { useDispatch } from '../../state/blogProvider';
 
 const BlogForm = () => {
@@ -9,6 +10,8 @@ const BlogForm = () => {
 
     const handleSubmit = e => {
         e.preventDefault();
+
+        dispatch(createBlog({ title, body }));
     };
 
     return (
