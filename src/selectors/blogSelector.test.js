@@ -1,4 +1,4 @@
-import { getBlogs } from './BlogSelector';
+import { getBlogs } from './blogSelector';
 
 describe('blog selectors', () => {
     it('selects the list of blogs from state', () => {

@@ -19,7 +19,7 @@ export const useDispatch = () => {
     return dispatch;
 }
 //hook to make it easier for child components to access state
-export const useBlogState = () => {
+export const useSelector = selector => {
     const { state } = useContext(BlogContext);
-    return state;
+    return selector(state);
 }
