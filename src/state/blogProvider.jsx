@@ -6,7 +6,6 @@ const BlogContext = createContext(null);
 export const BlogProvider = ({ children }) => {
     const [state, dispatch] = useReducer(reducer, initialState);
 
-
     return (
         <BlogContext.Provider value={state, dispatch}>
             {children}
@@ -18,4 +17,9 @@ export const BlogProvider = ({ children }) => {
 export const useDispatch = () => {
     const { dispatch } = useContext(BlogContext);
     return dispatch;
-} 
+}
+//hook to make it easier for child components to access state
+export const useBlogState = () => {
+    const { state } = useContext(BlogContext);
+    return state;
+}

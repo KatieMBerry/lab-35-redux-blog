@@ -4,7 +4,7 @@ import { createBlog } from '../actions/postActions';
 describe('blog reducer', () => {
     it('adds a blog with the CREATE_BLOG action', () => {
         const state = {
-            blogPosts: []
+            blogs: []
         };
 
         const action = createBlog({
@@ -15,7 +15,7 @@ describe('blog reducer', () => {
         const newState = reducer(state, action);
 
         expect(newState).toEqual({
-            blogPosts: [{ title: 'hello world', body: 'my first blog post body' }]
+            blogs: [{ title: 'hello world', body: 'my first blog post body' }]
         });
     });
 });

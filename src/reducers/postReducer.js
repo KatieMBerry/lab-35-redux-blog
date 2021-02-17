@@ -1,7 +1,7 @@
 import { CREATE_BLOG } from '../actions/postActions';
 
 export const initialState = {
-    blogPosts: []
+    blogs: []
 }
 
 export default function reducer(state, action) {
@@ -9,7 +9,7 @@ export default function reducer(state, action) {
         case CREATE_BLOG:
             return {
                 ...state,
-                blogPosts: [...state.blogPosts, action.payload]
+                blogs: [...state.blogs, action.payload]
             };
         default:
             return state;
