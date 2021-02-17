@@ -2,7 +2,7 @@ import { CREATE_BLOG } from '../actions/postActions';
 
 export const initialState = {
     blogs: []
-}
+};
 
 export default function reducer(state, action) {
     switch (action.type) {
