@@ -1,6 +1,6 @@
 import React from 'react';
 import { getBlogs } from '../../selectors/blogSelector';
-import { useSelector } from '../../state/blogProvider';
+import { useSelector } from '../../state/BlogProvider';
 import Blog from './Blog';
 
 const BlogList = () => {
