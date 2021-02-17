@@ -1,5 +1,10 @@
 import React from 'react';
+import BlogForm from '../form/BlogForm';
 
 export default function App() {
-  return <h1>Hello World</h1>;
+  return (
+    <>
+      <BlogForm />
+    </>
+  );
 }
