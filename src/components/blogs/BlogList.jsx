@@ -1,5 +1,5 @@
 import React from 'react';
-import { getBlogs } from '../../selectors/blogSelector';
+import { getBlogs } from '../../selectors/BlogSelector';
 import { useSelector } from '../../state/BlogProvider';
 import Blog from './Blog';
 
