@@ -1,6 +1,7 @@
 import { createBlog, CREATE_BLOG } from './postActions';
 
-describe('popst actions', () => {
+
+describe('post actions', () => {
     it('creates a create_blog action', () => {
         const action = createBlog({
             title: 'hello world',

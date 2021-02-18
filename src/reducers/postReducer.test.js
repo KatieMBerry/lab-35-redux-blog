@@ -1,5 +1,5 @@
 import reducer from './postReducer';
-import { createBlog } from '../actions/postActions';
+import { createBlog, deleteBlog } from '../actions/postActions';
 
 describe('blog reducer', () => {
     it('adds a blog with the CREATE_BLOG action', () => {
@@ -16,6 +16,18 @@ describe('blog reducer', () => {
 
         expect(newState).toEqual({
             blogs: [{ title: 'hello world', body: 'my first blog post body' }]
+        });
+    });
+
+    it('deletes a blog post via delete_blog action', () => {
+        const state = {
+            blogs: [{ title: 'hello world', body: 'my first blog post' }]
+        }
+
+        const action = deleteBlog('hello world');
+
+        expect(reducer(state, action)).toEqual({
+            blogs: []
         });
     });
 });
