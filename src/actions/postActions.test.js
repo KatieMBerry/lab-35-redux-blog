@@ -1,4 +1,4 @@
-import { createBlog, CREATE_BLOG } from './postActions';
+import { createBlog, CREATE_BLOG, DELETE_BLOG, deleteBlog } from './postActions';
 
 
 describe('post actions', () => {
@@ -11,6 +11,17 @@ describe('post actions', () => {
         expect(action).toEqual({
             type: CREATE_BLOG,
             payload: { title: 'hello world', body: 'my first blog post' }
+        });
+    });
+
+    it('deletes via a delete_blog action', () => {
+        const action = deleteBlog({
+            title: 'hello world'
+        });
+
+        expect(action).toEqual({
+            type: DELETE_BLOG,
+            payload: { title: 'hello world' }
         });
     });
 });
