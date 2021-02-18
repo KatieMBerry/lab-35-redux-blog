@@ -1,5 +1,5 @@
 import React from 'react';
-import { getBlogs } from '../../selectors/blogSelector';
+import { getBlogs } from '../../selectors/BlogSelector';
 import { useSelector } from '../../state/BlogProvider';
 import Blog from './Blog';
 
@@ -8,9 +8,11 @@ const BlogList = () => {
     const blogs = useSelector(getBlogs);
     //grabs state from provider and returns uls
     const blogElements = blogs.map(blog => {
-        <li key={blog.title}>
-            <Blog {...blog} />
-        </li>
+        return (
+            <li key={blog.title}>
+                <Blog {...blog} />
+            </li>
+        )
     });
 
     return (
@@ -18,6 +20,6 @@ const BlogList = () => {
             {blogElements}
         </ul>
     );
-}
+};
 
 export default BlogList;
