@@ -3,6 +3,7 @@ import { createBlog } from '../../actions/postActions';
 import { useDispatch } from '../../state/BlogProvider';
 
 const BlogForm = () => {
+
     const dispatch = useDispatch();
     //local state
     const [title, setTitle] = useState('');
@@ -23,11 +24,11 @@ const BlogForm = () => {
                     value={title}
                     onChange={({ target }) => setTitle(target.value)} />
 
-                <input
-                    type="text"
+                <textarea
+                    name="body"
                     placeholder="body"
                     value={body}
-                    onChange={({ target }) => setBody(target.value)} />
+                    onChange={({ target }) => setBody(target.value)}></textarea>
 
                 <button>Submit Blog</button>
             </form>

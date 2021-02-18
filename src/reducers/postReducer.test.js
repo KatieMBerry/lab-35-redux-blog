@@ -11,7 +11,7 @@ describe('blog reducer', () => {
             title: 'hello world',
             body: 'my first blog post body'
         });
-
+        //will run the above state and action through reducer:
         const newState = reducer(state, action);
 
         expect(newState).toEqual({
