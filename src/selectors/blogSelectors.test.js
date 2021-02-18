@@ -1,4 +1,4 @@
-import { countBlogs, getBlogs } from './BlogSelector.js';
+import { countBlogs, getBlogs } from './blogSelectors.js';
 
 describe('blog selectors', () => {
     it('selects the list of blogs from state', () => {

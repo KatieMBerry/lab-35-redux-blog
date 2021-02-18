@@ -3,7 +3,7 @@ import reducer, { initialState } from '../reducers/postReducer';
 
 const BlogContext = createContext(null);
 
-export const BlogProvider = ({ children }) => {
+export const BlogsProvider = ({ children }) => {
     const [state, dispatch] = useReducer(reducer, initialState);
 
     return (
