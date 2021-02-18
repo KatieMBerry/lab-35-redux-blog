@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { createBlog } from '../../actions/postActions';
 import { useDispatch } from '../../state/BlogProvider';
+import styles from './BlogForm.css';
 
 const BlogForm = () => {
 
@@ -17,7 +18,7 @@ const BlogForm = () => {
 
     return (
         <>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} className={styles.BlogForm}>
                 <input
                     type="text"
                     placeholder="title"
