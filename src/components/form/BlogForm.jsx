@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { createBlog } from '../../actions/postActions';
 import { useDispatch } from '../../state/BlogsProvider';
+import BlogList from '../blogs/BlogList';
 import styles from './BlogForm.css';
 
 const BlogForm = () => {
@@ -19,6 +20,7 @@ const BlogForm = () => {
     return (
         <>
             <form onSubmit={handleSubmit} className={styles.BlogForm}>
+                <h1>Redux Blog</h1>
                 <input
                     type="text"
                     placeholder="title"
@@ -33,6 +35,8 @@ const BlogForm = () => {
 
                 <button>Submit Blog</button>
             </form>
+
+            <BlogList />
         </>
     )
 }

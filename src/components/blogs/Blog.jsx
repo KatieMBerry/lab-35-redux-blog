@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { useDispatch } from '../../state/BlogsProvider';
 import { deleteBlog } from '../../actions/postActions';
 
-const Blog = ({ title, body }) => {
+const Blog = ({ title }) => {
     const dispatch = useDispatch();
     const handleClick = () => {
         dispatch(deleteBlog(title));
@@ -12,15 +12,13 @@ const Blog = ({ title, body }) => {
     return (
         <>
             <h1>{title}</h1>
-            <p>{body}</p>
             <button onClick={handleClick}>Delete Post</button>
         </>
     );
 };
 
 Blog.propTypes = {
-    title: PropTypes.string.isRequired,
-    body: PropTypes.string.isRequired
+    title: PropTypes.string.isRequired
 };
 
 export default Blog;
