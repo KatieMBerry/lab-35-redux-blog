@@ -1,4 +1,4 @@
-import { countBlogs, getBlogs } from './blogSelectors.js';
+import { getBlogs } from './blogSelectors.js';
 
 describe('blog selectors', () => {
     it('selects the list of blogs from state', () => {
@@ -7,12 +7,5 @@ describe('blog selectors', () => {
         };
         //returns the array of blogs
         const blogs = getBlogs(state);
-    });
-
-    it('counts the number of blogs in the list', () => {
-        const state = {
-            blogs: [{ title: 'hello world', body: 'my first blog body' }]
-        };
-        expect(countBlogs(state)).toEqual(1);
     });
 });
