@@ -1,25 +1,32 @@
 import React from 'react';
-import {
-  BrowserRouter as Router,
-  Route,
-  Switch
-} from 'react-router-dom';
-import Header from '../headers/Header';
+// import {
+//   BrowserRouter as Router,
+//   Route,
+//   Switch
+// } from 'react-router-dom';
+// import Header from '../headers/Header';
 import BlogForm from '../form/BlogForm';
-import BlogDetail from '../details/BlogDetail';
+import BlogList from '../blogs/BlogList'
+// import BlogDetail from '../details/BlogDetail';
 
 export default function App() {
   return (
-    <Router>
-      <Header />
-      <Switch>
-        <Route
-          exact path="/"
-          component={BlogForm} />
-        <Route
-          path="/blogs/:index"
-          component={BlogDetail} />
-      </Switch>
-    </Router>
+    <>
+      {/* <Header /> */}
+      <BlogForm />
+      <BlogList />
+
+      {/* <Router>
+        <Header />
+        <Switch>
+          <Route
+            exact path="/"
+            component={BlogForm} />
+          <Route
+            path="/blogs/:postIndex"
+            component={BlogDetail} /> 
+       </Switch>
+      </Router> */}
+    </>
   );
 }

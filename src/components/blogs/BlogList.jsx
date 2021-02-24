@@ -1,16 +1,15 @@
 import React from 'react';
 import { getBlogs } from '../../selectors/blogSelectors';
-import { useSelector } from '../../state/BlogsProvider';
+import { useSelector } from 'react-redux';
 import Blog from './Blog';
 
 const BlogList = () => {
-    //instead of getting all state, now asks provider for only blogs
     const blogs = useSelector(getBlogs);
-    //grabs state from provider and returns uls
-    const blogElements = blogs.map(blog => {
+
+    const blogElements = blogs.map((blog, index) => {
         return (
             <li key={blog.title}>
-                <Blog {...blog} />
+                <Blog index={index} {...blog} />
             </li>
         )
     });

@@ -1,5 +1,6 @@
 import { CREATE_BLOG, DELETE_BLOG } from '../actions/postActions';
 
+
 export const initialState = {
     blogs: []
 };
